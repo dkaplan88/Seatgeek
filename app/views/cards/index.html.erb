@@ -1,9 +1,16 @@
+<%#= @v %><br>
+
 <% @seatgeek["events"].each do |event| %>
-<p> <%= event["title"] %> <br>	
-    <%= event["venue"]["name"] %><br>
-    Tickets Left: <%= event["stats"]["listing_count"] %>, 
-    Avg Price: <%= number_to_currency(event["stats"]["average_price"]) %> , 
-    Lowest Price: <%= number_to_currency(event["stats"]["lowest_price"]) %>, 
-    Highest Price: <%= number_to_currency(event["stats"]["highest_price"]) %><br>
-    <%= link_to "Get Tickets", event["url"] %><br>
+<p><b>Title</b> <%= event["title"] %> <br> 
+  <b>Venue:</b>  <%= event["venue"]["name"] %><br>
+    <!-- Tickets Left: <%#= event["stats"]["listing_count"] %>, 
+        Avg Price: <%#= number_to_currency(event["stats"]["average_price"]) %> , 
+        Lowest Price: <%#= number_to_currency(event["stats"]["lowest_price"]) %>, 
+        Highest Price: <%#= number_to_currency(event["stats"]["highest_price"]) %><br> -->
+    <b>City:</b> <%= event["venue"]["city"] %><br>
+    <b>Type:</b> <%= event["type"] %></p>
   <% end %>
+  
+  <%#= @card %>
+  
+  

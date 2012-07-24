@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'balanced'
 gem 'httparty'
 gem 'seatgeek', :require => 'seatgeek'
+gem 'geocoder'
 
 
 # Gems used only for assets and not required
